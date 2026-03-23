@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Java — El Lenguaje que Mueve el Mundo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-bar"></div>
+    <span class="loader-text">Cargando<span class="dots">...</span></span>
+  </div>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-icon">☕</span>
+      <span>JAVA</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#intro" class="nav-link">Inicio</a></li>
+      <li><a href="#historia" class="nav-link">Historia</a></li>
+      <li><a href="#caracteristicas" class="nav-link">Características</a></li>
+      <li><a href="#usos" class="nav-link">Usos</a></li>
+      <li><a href="#codigo" class="nav-link">Código</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="intro">
+    <div class="hero-bg-text">JAVA</div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal">Lenguaje de Programación</p>
+      <h1 class="hero-title reveal">
+        Escríbelo una vez.<br/>
+        <em>Ejecútalo en todas partes.</em>
+      </h1>
+      <p class="hero-sub reveal">
+        Java es uno de los lenguajes más poderosos, portables y ampliamente usados
+        del mundo. Desde aplicaciones empresariales hasta Android, Java lo hace posible.
+      </p>
+      <div class="hero-cta reveal">
+        <a href="#historia" class="btn-primary">Explorar</a>
+        <a href="#codigo" class="btn-ghost">Ver código</a>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <div class="badge-ring"></div>
+      <span>v21<br/>LTS</span>
+    </div>
+    <div class="scroll-hint" id="scrollHint">↓ Scroll</div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat reveal">
+        <span class="stat-num" data-target="30">0</span>+
+        <span class="stat-label">años de historia</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat reveal">
+        <span class="stat-num" data-target="3">0</span>B+
+        <span class="stat-label">dispositivos activos</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat reveal">
+        <span class="stat-num" data-target="9">0</span>M+
+        <span class="stat-label">desarrolladores</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat reveal">
+        <span class="stat-num" data-target="1">0</span>
+        <span class="stat-label">Write Once, Run Anywhere</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTORIA -->
+  <section class="section" id="historia">
+    <div class="section-inner">
+      <div class="section-tag reveal">— Historia</div>
+      <h2 class="section-title reveal">Nació para<br/><em>cambiar todo</em></h2>
+      <div class="timeline">
+        <div class="timeline-item reveal" data-year="1991">
+          <div class="timeline-year">1991</div>
+          <div class="timeline-content">
+            <h3>Proyecto Green</h3>
+            <p>James Gosling y su equipo en Sun Microsystems crean un lenguaje para dispositivos embebidos. Originalmente llamado <strong>Oak</strong>.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal" data-year="1995">
+          <div class="timeline-year">1995</div>
+          <div class="timeline-content">
+            <h3>Java 1.0 — Nace al mundo</h3>
+            <p>Sun Microsystems lanza oficialmente Java. Su promesa: <em>"Write Once, Run Anywhere"</em> revoluciona el desarrollo de software.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal" data-year="2007">
+          <div class="timeline-year">2007</div>
+          <div class="timeline-content">
+            <h3>Open Source</h3>
+            <p>Sun libera la mayor parte de Java bajo licencia GNU GPL, democratizando el acceso al ecosistema.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal" data-year="2010">
+          <div class="timeline-year">2010</div>
+          <div class="timeline-content">
+            <h3>Oracle adquiere Sun</h3>
+            <p>Oracle Corporation compra Sun Microsystems y toma el control del desarrollo de Java.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal" data-year="2024">
+          <div class="timeline-year">2024</div>
+          <div class="timeline-content">
+            <h3>Java 21 — LTS Moderno</h3>
+            <p>Con virtual threads, pattern matching y record patterns, Java 21 es la versión LTS más avanzada hasta la fecha.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARACTERÍSTICAS -->
+  <section class="section section-dark" id="caracteristicas">
+    <div class="section-inner">
+      <div class="section-tag reveal">— Características</div>
+      <h2 class="section-title reveal">Lo que hace a Java<br/><em>especial</em></h2>
+      <div class="features-grid">
+        <div class="feature-card reveal" data-icon="🔄">
+          <div class="feature-icon">🔄</div>
+          <h3>Portabilidad</h3>
+          <p>La JVM (Java Virtual Machine) permite ejecutar el mismo bytecode en cualquier sistema operativo: Windows, Linux, macOS.</p>
+        </div>
+        <div class="feature-card reveal" data-icon="🔒">
+          <div class="feature-icon">🔒</div>
+          <h3>Seguridad</h3>
+          <p>Gestión automática de memoria, tipado fuerte y sandbox de ejecución lo convierten en uno de los lenguajes más seguros.</p>
+        </div>
+        <div class="feature-card reveal" data-icon="⚙️">
+          <div class="feature-icon">⚙️</div>
+          <h3>Orientado a Objetos</h3>
+          <p>Todo en Java es un objeto. Herencia, encapsulamiento, polimorfismo y abstracción son pilares del lenguaje.</p>
+        </div>
+        <div class="feature-card reveal" data-icon="🚀">
+          <div class="feature-icon">🚀</div>
+          <h3>Alto Rendimiento</h3>
+          <p>El compilador JIT (Just-In-Time) optimiza el código en tiempo de ejecución, logrando rendimiento cercano al nativo.</p>
+        </div>
+        <div class="feature-card reveal" data-icon="🧵">
+          <div class="feature-icon">🧵</div>
+          <h3>Multihilo</h3>
+          <p>Soporte nativo para concurrencia con threads, sincronización y en Java 21, Virtual Threads para millones de hilos ligeros.</p>
+        </div>
+        <div class="feature-card reveal" data-icon="📦">
+          <div class="feature-icon">📦</div>
+          <h3>Ecosistema Rico</h3>
+          <p>Maven, Gradle, Spring, Hibernate, Jakarta EE — un ecosistema maduro con soluciones para cualquier problema.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USOS -->
+  <section class="section" id="usos">
+    <div class="section-inner">
+      <div class="section-tag reveal">— Usos</div>
+      <h2 class="section-title reveal">¿Dónde vive<br/><em>Java hoy?</em></h2>
+      <div class="usos-list">
+        <div class="uso-item reveal">
+          <span class="uso-num">01</span>
+          <div class="uso-text">
+            <h3>Aplicaciones Android</h3>
+            <p>Java fue el lenguaje original de Android. Miles de millones de apps móviles se construyeron con Java.</p>
+          </div>
+          <span class="uso-arrow">→</span>
+        </div>
+        <div class="uso-item reveal">
+          <span class="uso-num">02</span>
+          <div class="uso-text">
+            <h3>Sistemas Empresariales</h3>
+            <p>Bancos, aseguradoras y corporaciones globales confían en Java para sus sistemas críticos de negocio.</p>
+          </div>
+          <span class="uso-arrow">→</span>
+        </div>
+        <div class="uso-item reveal">
+          <span class="uso-num">03</span>
+          <div class="uso-text">
+            <h3>Big Data & Cloud</h3>
+            <p>Hadoop, Spark, Kafka — las herramientas más importantes de Big Data están escritas en Java.</p>
+          </div>
+          <span class="uso-arrow">→</span>
+        </div>
+        <div class="uso-item reveal">
+          <span class="uso-num">04</span>
+          <div class="uso-text">
+            <h3>Aplicaciones Web</h3>
+            <p>Con frameworks como Spring Boot, Java domina el backend de aplicaciones web de alto tráfico.</p>
+          </div>
+          <span class="uso-arrow">→</span>
+        </div>
+        <div class="uso-item reveal">
+          <span class="uso-num">05</span>
+          <div class="uso-text">
+            <h3>Internet of Things</h3>
+            <p>Java ME y sus derivados siguen presentes en millones de dispositivos embebidos y sensores IoT.</p>
+          </div>
+          <span class="uso-arrow">→</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓDIGO -->
+  <section class="section section-dark" id="codigo">
+    <div class="section-inner">
+      <div class="section-tag reveal">— Código</div>
+      <h2 class="section-title reveal">Java en<br/><em>acción</em></h2>
+      <div class="code-tabs reveal">
+        <button class="tab-btn active" data-tab="hola">Hola Mundo</button>
+        <button class="tab-btn" data-tab="clase">Clase y OOP</button>
+        <button class="tab-btn" data-tab="stream">Streams</button>
+      </div>
+      <div class="code-window reveal">
+        <div class="code-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="code-filename" id="codeFilename">Main.java</span>
+          <button class="copy-btn" id="copyBtn">Copiar</button>
+        </div>
+        <pre class="code-block" id="codeBlock"><code id="codeContent"></code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">☕ JAVA</div>
+      <p class="footer-text">Construido con pasión por el desarrollo. Java — 30 años de legado.</p>
+      <p class="footer-copy">© 2024 — Contenido educativo</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
