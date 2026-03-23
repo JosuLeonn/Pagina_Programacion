@@ -1,0 +1,24 @@
+         :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#7dd3fc}
+        *{box-sizing:border-box}
+        body{font-family:Inter,system-ui,Segoe UI,Roboto,sans-serif;margin:0;background:linear-gradient(180deg,#071029 0%,#071826 100%);color:#e6eef6;line-height:1.5}
+        .container{max-width:1100px;margin:36px auto;padding:24px}
+        header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px}
+        .brand{display:flex;align-items:center;gap:12px}
+        .logo{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,#0366d6,#7dd3fc);display:flex;align-items:center;justify-content:center;font-weight:700;color:#023b5a}
+        nav a{color:var(--muted);text-decoration:none;margin-left:14px;font-weight:600}
+        .hero{background:linear-gradient(90deg,rgba(255,255,255,0.02),transparent);padding:24px;border-radius:12px;margin-bottom:18px}
+        .grid{display:grid;grid-template-columns:1fr 350px;gap:18px}
+        main{min-height:320px}
+        .card{background:rgba(255,255,255,0.03);padding:16px;border-radius:10px;margin-bottom:12px}
+        h1{margin:0;font-size:1.4rem}
+        p.lead{color:var(--muted);margin-top:8px}
+        .sidebar .card{position:sticky;top:24px}
+        pre{margin:0;border-radius:8px;overflow:auto}
+        .meta{display:flex;gap:8px;font-size:13px;color:var(--muted);margin-bottom:12px}
+        button.copy{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:6px 10px;border-radius:8px;cursor:pointer;font-weight:600}
+        ul.topics{list-style:none;padding:0;margin:0}
+        ul.topics li{padding:8px 0;border-bottom:1px dashed rgba(255,255,255,0.03)}
+        .exercise .answer{display:none;background:#071a2a;padding:12px;border-radius:8px;margin-top:8px;color:#cfeefc}
+        footer{color:var(--muted);text-align:center;padding:24px 0;font-size:13px;margin-top:18px}
+        @media (max-width:880px){.grid{grid-template-columns:1fr} .sidebar{order:2}}
+    

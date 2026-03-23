@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Aprende Java — Página base</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Prism para resaltado de sintaxis -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand">
+                <div class="logo">Jv</div>
+                <div>
+                    <div style="font-weight:700">Aprende Java</div>
+                    <div style="font-size:13px;color:var(--muted)">Base de contenidos y ejemplos</div>
+                </div>
+            </div>
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#lecciones">Lecciones</a>
+                <a href="#ejemplos">Ejemplos</a>
+                <a href="#ejercicios">Ejercicios</a>
+                <a href="#recursos">Recursos</a>
+            </nav>
+        </header>
+
+        <section class="hero card" id="inicio">
+            <h1>Bienvenido — Aprende Java paso a paso</h1>
+            <p class="lead">Esta plantilla es una base para organizar lecciones, ejemplos y ejercicios de Java. Incluye fragmentos de código con resaltado y controles básicos para copiar/mostrar respuestas.</p>
+            <div class="meta">
+                <div>Nivel: Principiante → Intermedio</div>
+                <div>Duración estimada: Depende del contenido</div>
+            </div>
+        </section>
+
+        <div class="grid">
+            <main>
+                <section id="lecciones" class="card">
+                    <h2>Lecciones sugeridas</h2>
+                    <ul class="topics">
+                        <li>Introducción y herramientas (JDK, IDEs, compilación)</li>
+                        <li>Sintaxis básica: tipos, variables, operadores</li>
+                        <li>Control de flujo: if, switch, loops</li>
+                        <li>Programación orientada a objetos: clases, objetos, herencia</li>
+                        <li>Colecciones y genéricos</li>
+                        <li>Manejo de excepciones</li>
+                        <li>Entrada/salida y ficheros</li>
+                        <li>Hilos y concurrencia (conceptos básicos)</li>
+                        <li>Streams y programación funcional</li>
+                        <li>Buenas prácticas y testing</li>
+                    </ul>
+                </section>
+
+                <section id="ejemplos" class="card">
+                    <h2>Ejemplos de código</h2>
+                    <p class="meta">Ejemplo 1: Hola Mundo</p>
+                    <div style="position:relative;margin-bottom:12px">
+                        <button class="copy" data-target="code1">Copiar</button>
+                        <pre><code id="code1" class="language-java">
+// HolaMundo.java
+public class HolaMundo {
+    public static void main(String[] args) {
+        System.out.println("¡Hola, Mundo!");
+    }
+}
+                        </code></pre>
+                    </div>
+
+                    <p class="meta">Ejemplo 2: Clase y método</p>
+                    <div style="position:relative;margin-bottom:12px">
+                        <button class="copy" data-target="code2">Copiar</button>
+                        <pre><code id="code2" class="language-java">
+// Persona.java
+public class Persona {
+    private String nombre;
+    public Persona(String nombre) { this.nombre = nombre; }
+    public void saludar() { System.out.println("Hola, soy " + nombre); }
+
+    public static void main(String[] args) {
+        Persona p = new Persona("Ana");
+        p.saludar();
+    }
+}
+                        </code></pre>
+                    </div>
+
+                    <p class="meta">Ejemplo 3: Uso de ArrayList</p>
+                    <div style="position:relative;margin-bottom:0">
+                        <button class="copy" data-target="code3">Copiar</button>
+                        <pre><code id="code3" class="language-java">
+// ListaEjemplo.java
+import java.util.ArrayList;
+public class ListaEjemplo {
+    public static void main(String[] args) {
+        ArrayList<String> frutas = new ArrayList<>();
+        frutas.add("Manzana");
+        frutas.add("Pera");
+        for (String f : frutas) {
+            System.out.println(f);
+        }
+    }
+}
+                        </code></pre>
+                    </div>
+                </section>
+
+                <section id="ejercicios" class="card">
+                    <h2>Ejercicios</h2>
+                    <div class="exercise">
+                        <strong>Ejercicio 1:</strong> Escribe un programa que calcule la suma de los primeros N números naturales.
+                        <div>
+                            <button class="copy" data-target="sol1">Copiar solución</button>
+                            <button onclick="toggleAnswer('a1')">Mostrar/ocultar solución</button>
+                            <pre id="sol1" style="display:none"><code class="language-java">
+// Solución posible: SumaN.java
+import java.util.Scanner;
+public class SumaN {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("N: ");
+        int n = sc.nextInt();
+        int suma = n * (n + 1) / 2; // fórmula aritmética
+        System.out.println("Suma = " + suma);
+        sc.close();
+    }
+}
+                            </code></pre>
+                        </div>
+                        <div id="a1" class="answer">Sugerencia: puedes usar un bucle for o la fórmula n*(n+1)/2.</div>
+                    </div>
+                </section>
+
+                <section id="recursos" class="card">
+                    <h2>Recursos útiles</h2>
+                    <ul>
+                        <li><a href="https://docs.oracle.com/en/java/" target="_blank" rel="noopener" style="color:var(--accent)">Documentación oficial de Oracle Java</a></li>
+                        <li><a href="https://openjdk.org/" target="_blank" rel="noopener" style="color:var(--accent)">OpenJDK</a></li>
+                        <li><a href="https://www.baeldung.com/" target="_blank" rel="noopener" style="color:var(--accent)">Tutoriales y artículos (Baeldung)</a></li>
+                    </ul>
+                </section>
+            </main>
+
+            <aside class="sidebar">
+                <div class="card">
+                    <h3>Herramientas</h3>
+                    <ul style="padding-left:16px;color:var(--muted)">
+                        <li>JDK 17+</li>
+                        <li>IDE: IntelliJ IDEA / Eclipse / VSCode</li>
+                        <li>Build: Maven o Gradle</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Atajos de práctica</h3>
+                    <p style="color:var(--muted);margin:0">Compilar: javac MiClase.java<br>Ejecutar: java MiClase</p>
+                </div>
+
+                <div class="card">
+                    <h3>Contacto</h3>
+                    <p style="color:var(--muted);margin:0">Crea issues o PRs en tu repositorio para mejorar contenidos.</p>
+                </div>
+            </aside>
+        </div>
+
+        <footer>
+            Plantilla minimal para enseñar Java — Personalízala según tu plan de estudios.
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <link 
+</body>
+</html>
